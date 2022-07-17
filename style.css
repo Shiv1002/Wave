@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body{
+    background-color: cornsilk;
+    height: 83.5%;   
+}
+@media screen and (min-height:644px) {
+   html, body{
+    background-color: rgb(86, 84, 75);
+    height: 85.85%;   
+} 
+.songname{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.container .cover #gif{
+    opacity: 0.7;
+    transition: opacity 0.7s cubic-bezier(0.42, 0, 0.7, 0.99);
+    height: 0vh;
+    width: 0vh;
+   
+}
+}
+.brand img{   
+    width: 30px;
+    padding: 0px 3px;
+    
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+   
+}
+.header ul{
+    font-family: 'Source Serif 4', sans-serif;
+    display: flex; 
+    list-style-type: none;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    height: 35px; 
+    color: blanchedalmond;
+}
+.header ul li {
+     padding: 9px;
+     
+}
+.container{
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    color: whitesmoke;
+    margin:   10px auto;
+    padding:  20px;
+    width: 80%;
+    border-radius: 13px;
+    justify-content: space-between;
+    background-image: url('images/bg-image.jpg');
+    
+}
+.cover{
+    align-self: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+}
+.container .cover #gif{
+    opacity: 0.7;
+    transition: opacity 0.7s cubic-bezier(0.42, 0, 0.7, 0.99);
+    height: 0vh;
+    width: 0vh;
+    border-radius: 10px;
+}
+.banner{
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    
+}
+.songbannerlist{
+    margin: 10px 0px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+   
+}
+.songbannerlist::-webkit-scrollbar{
+    width:10px;
+    height: 10px;
+}
+.songlist{
+    position: relative;
+    display: flex;
+    padding: 0 5px;
+    margin-top: 10px;
+    height: 45px;
+    background-color: rgb(252, 252, 252);
+    color: black;
+    border-radius: 20px;
+    display: flex;
+    
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+
+  
+
+}
+.songname{
+    font-family: 'Source Serif 4', sans-serif;
+    display: flex;
+    align-items: center;
+    margin: 0px 5px;
+    width: 50vw;
+    height: 100%;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow-x:auto ;
+}
+.songlist .timestamp {
+    position: absolute;
+    right: 3px;
+    width: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.footer{
+    background-color: black;
+    color: blanchedalmond;
+    display: flex;
+    justify-content:center;
+    flex-direction:  column;
+    align-items: center;
+    padding: 1vw 0%;
+    margin-bottom: 0% ;
+}
+marquee{
+    width: 100vw;
+}
+#seekbar{
+    width: 80vw;
+    cursor: pointer;
+}
+.icons{
+    color: rgb(213, 218, 218);
+    display: flex; 
+    cursor: pointer;
+}
