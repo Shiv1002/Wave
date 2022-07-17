@@ -21,9 +21,14 @@ let songs =[
 let audioElement = new Audio(songs[songindex].src);
 songitem.forEach((Element,i)=>
 {
-    document.getElementsByClassName('songname')[i].innerHTML = songs[i].songname;
+    try {
+        document.getElementsByClassName('songname')[i].innerHTML = songs[i].songname;
     Element.getElementsByTagName('img')[0].src = songs[i].cover;
     Element.getElementsByTagName('span')[2].innerHTML =songs[i].timestamp;
+    } catch (error) {
+        console.log(error);
+    }
+    
 
 });        
 
@@ -139,7 +144,7 @@ masterBack.addEventListener("click",()=>{
                audioElement.src = songs[songindex].src; 
             }catch(e){
                 audioElement.onerror;
-                
+                alert("No Song Loaded!!");
             }
 
         
@@ -152,6 +157,7 @@ masterBack.addEventListener("click",()=>{
 
 audioElement.onerror = (e) => {
     
-    console.log() ;masterBack.click();
+    console.log() ;masterForword.click();
 }
+
 
