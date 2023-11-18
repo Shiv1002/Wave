@@ -100,10 +100,11 @@ body{
 }
 
 .songbannerlist{
-    margin: 1rem 3rem 1rem 0;
+    margin: 1rem 1rem ;
     width: 70%;
     overflow-x: hidden;
     overflow-y: auto;
+    flex-grow: 1;
    
 }
 .songbannerlist::-webkit-scrollbar{
@@ -124,15 +125,15 @@ body{
 }
 
 .songname{
-    font-family: 'Source Serif 4', sans-serif;
     display: flex;
     align-items: center;
     margin: 0px 5px;
-    width: 50vw;
+    max-width: 40vw;
     height: 100%;
     font-weight: bolder;
     white-space: nowrap;
     overflow:auto; 
+    overflow: hidden;
 }
 
 
@@ -148,6 +149,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    font-weight: bold;
     
 }
 
@@ -206,9 +208,25 @@ svg{
 
 .about-icons svg{
     margin: 0.6rem 1rem;
-   
+   fill: white;
 }
 .About a{
     color: white;
     text-decoration: none;
+}
+@media (max-width: 992px) {
+    /* Styles for small devices */
+    .container{
+        width: 75%;
+    }
+    .cover{
+        display:none;
+    }
+}
+  
+
+@media (max-width:768px){
+    .container{
+        width: 80%;
+    }
 }
