@@ -166,7 +166,8 @@ body{
     margin-bottom: 0% ;
 }
 marquee{
-    width: 95vw;
+    width: 90vw;
+    font-weight:bold;
 }
 #seekbar{
     width: 80vw;
@@ -179,6 +180,11 @@ marquee{
 }
 .icons i{
     margin: 0.6rem;
+    background: pink;
+	background: -webkit-radial-gradient(33% 100% circle, #515ECF 4%, #9B36B7 30%, #D92E7F 62%, #F15245 85%, #FED373);
+	background: radial-gradient(circle at 33% 100%, #ff3be7 4%, #ff3be7 28%, #03ffe8 62%, #F15245 85%, #FED373);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 svg{
     margin-top: 6px;
@@ -200,7 +206,7 @@ svg{
 
 .about-icons svg{
     margin: 0.6rem 1rem;
-    fill:white
+   
 }
 .About a{
     color: white;
