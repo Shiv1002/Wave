@@ -5,94 +5,103 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --primary:#3c1247;
+}
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Source Serif 4', sans-serif    
+}
 
-
-html, body{
-    background-color: #fff8dc;
-    height: 83.5%;   
-}
-@media screen and (min-height:644px) {
-   html, body{
-    background-color: rgb(86, 84, 75);
-    height: 85.85%;   
-} 
-.songname{
-    font-size: 1.2rem;
-    text-align: justify;
-}
-.container .cover #gif{
-    opacity: 0.7;
-    transition: opacity 0.7s cubic-bezier(0.42, 0, 0.7, 0.99);
-    height: 0vh;
-    width: 0vh;
-   
-}
-}
 .brand img{   
-    width: 30px;
+    width: 75px;
     padding: 0px 3px;
-    
 }
 
 .brand {
     display: flex;
     align-items: center;
     font-weight: bolder;
-    font-size: 1.3rem;
-   
+    font-size: 3rem;
 }
-.header ul nav{
-    
+.header{
+    color: white;
+    height: max-content;
+    padding: 0.6rem  0;
+    background-color: var(--primary);
+    font-weight: bolder;    
+}
+.header ul {
+    display: flex;
+    justify-content: space-between;
     font-family: 'Source Serif 4', sans-serif;
     display: flex; 
     list-style-type: none;
     align-items: center;
-    background-color: rgb(0, 0, 0);
-    height: 35px; 
-    color: blanchedalmond;
 }
-.header ul li a{
 
-     padding: 8px;
+.header ul li a{
+     padding: 1rem;
+     margin: 1rem;
      color: inherit;
      text-decoration: none;
 }
+
+.music-player-container{
+    background: linear-gradient(180deg,var(--primary),white);
+    flex-grow: 1;
+    /* padding: 2rem 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* overflow: scroll; */
+}
+
 .container{
-    height: 100%;
-    background-color: black;
+    
     display: flex;
     flex-direction: row;
     color: whitesmoke;
-    margin:   10px auto;
+    margin: 1.5rem auto;
     padding:  20px;
-    width: 80%;
+    width: 60%;
     border-radius: 13px;
-    justify-content: space-between;
-    background-image: url('images/bg-image.jpg');
-    
+    background: url('images/bg-image.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    box-shadow: 0px 3px 50px 0px white;
 }
+
+
+
 .cover{
     align-self: center;
     display: flex;
     flex-wrap: nowrap;
     align-content: center;
 }
+
 .container .cover #gif{
-    opacity: 0.7;
+    /* opacity: 0.7; */
     transition: opacity 0.7s cubic-bezier(0.42, 0, 0.7, 0.99);
-    height: 0vh;
-    width: 0vh;
+    height: 30vh;
+    width: 20vw;
     border-radius: 10px;
 }
 .banner{
     border-radius: 40px;
     width: 40px;
     height: 40px;
-    
 }
+
 .songbannerlist{
-    margin: 10px 0px;
-    width: 100%;
+    margin: 1rem 3rem 1rem 0;
+    width: 70%;
     overflow-x: hidden;
     overflow-y: auto;
    
@@ -104,19 +113,16 @@ html, body{
 .songlist{
     position: relative;
     display: flex;
-    padding: 0 5px;
-    margin-top: 10px;
-    height: 45px;
+    /* height: 45px; */
+    margin: 10px 0;
+    padding: 10px;
     background-color: rgb(252, 252, 252);
     color: black;
     border-radius: 20px;
-    display: flex;
-    
-    flex-direction: row;
     flex-wrap: nowrap;
-    align-content: center;
     align-items: center;
 }
+
 .songname{
     font-family: 'Source Serif 4', sans-serif;
     display: flex;
@@ -128,17 +134,15 @@ html, body{
     white-space: nowrap;
     overflow:auto; 
 }
-html::-webkit-scrollbar{
-    width:0px;
-    height: 0px;
-}
+
+
 .songname::-webkit-scrollbar{
     width:0px;
     height: 0px;
 }
 .songlist .timestamp {
     position: absolute;
-    right: 3px;
+    right: 1rem;
     width: 50px;
     cursor: pointer;
     display: flex;
@@ -149,13 +153,11 @@ html::-webkit-scrollbar{
 
 .aboutme p{
     font-size: larger;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 20px;
 }
 
-.footer{
-    background-color: black;
-    color: blanchedalmond;
+.media-player{
+    color: black;
     display: flex;
     justify-content:center;
     flex-direction:  column;
@@ -171,24 +173,36 @@ marquee{
     cursor: pointer;
 }
 .icons{
-    color: rgb(213, 218, 218);
+    color: var(--primary);
     display: flex; 
     cursor: pointer;
 }
-.About{
-    width: inherit;
-    background-color: inherit;
-    
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 3px;
-    border-radius: 3px;
-    text-align: center;
-    padding: 8px;
-    text-decoration: none;
+.icons i{
+    margin: 0.6rem;
 }
 svg{
     margin-top: 6px;
     height: 20px;
     width:20px;
     align-items: center;
+}
+
+.About{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 1rem 1rem 0 0;
+    padding: 1rem 0 ;    
+}
+
+.about-icons svg{
+    margin: 0.6rem 1rem;
+    fill:white
+}
+.About a{
+    color: white;
+    text-decoration: none;
 }
